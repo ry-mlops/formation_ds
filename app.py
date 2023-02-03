@@ -57,11 +57,14 @@ if __name__ == '__main__':
 
 ######## INSEREZ VOS TRAITEMENTS DE DONNEES ET VOS PLOTS ICI : ########
 
+    st.write("Ceci est un exemple")
     fig = plt.figure()
 
     group_by = data.groupby("satisfaction")["Age"].mean()
 
     sns.barplot(x=group_by.index, y=group_by.values)
+    plt.title("Age moyen par groupes de satisfaction")
+    plt.ylabel("Age moyen")
     st.pyplot(fig)
 
 
