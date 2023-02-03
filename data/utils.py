@@ -10,7 +10,7 @@ def prepare_dataset():
     # Concatenation de train et test
     data = pd.concat([test, train])
 
-    # Mélange des entrées de manière aléatoire
+    # Mélange les entrées aléatoirement
     data = data.sample(frac=1).reset_index(drop=True)
 
     # Création d'une colonne date avec des valeurs aléatoires du 1/1/2018 au 1/1/2023
